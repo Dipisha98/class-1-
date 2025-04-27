@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Calculator Project</title>
+    </head>
+    <body>
+        <label for="Num1">
+            Enter your first number:
+        </label>
+        <input id="Num1"type="number"></input>
+    </br></br>
+        <label for="Num2">
+            Enter your second number:
+        </label>
+        <input id="Num2" type="number"></input>
+    </br></br>
+        <button onclick="operations('Add')">
+            Add
+        </button>
+        <button onclick="operations('Subtract')">
+            Subtract
+        </button>
+        <button onclick="operations('Multiply')">
+            Multiply
+        </button>
+        <button onclick="operations('Divide')">
+            Divide
+        </button>
+        <h2>Result: <span id="result">-</span></h2>
+        <script>
+            function operations(calculate)
+            {var input1=parseFloat(document.getElementById("Num1").value);
+            var input2=parseFloat(document.getElementById("Num2").value);
+            var result
+            if(calculate==="Add")
+            {result=input1+input2}
+            else if(calculate==="Subtract")
+            {result=input1-input2}
+            else if(calculate==="Multiply")
+            {result=input1*input2}
+            else if(calculate==="Divide")
+            {result=input1/input2}
+            else
+            {result="One or two of these values are invalid and the calculator cannot give the results. Please change the values!"}
+            document.getElementById("result").textContent=result}
+            
+        </script>
+    </body>
+</html>
